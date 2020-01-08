@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <title>sscaffold: lightweight css for people who build things</title>
+
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:300,300italic,500,500italic,700,700italic&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,500,500italic&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="/css/sscaffold.css">
+        <style type="text/css">
+
+            #logo {
+                display: block;
+                margin: 0 auto 2.0rem auto;
+                margin-bottom: 4.0rem;
+            }
+
+            .column {
+                background: #d1d1d1;
+                border: 1px solid #efefef;
+                display: block;
+                font-size: 1rem;
+                font-weight: 600;
+                height: 3rem;
+                letter-spacing: .1rem;
+                line-height: 3rem;
+                margin-bottom: 2.5rem;
+                text-align: center;
+                text-transform: uppercase;
+            }
+
+            /* skeleton.css grid */
+            #grid .column,
+            #grid .columns {
+                background: #EEE;
+                text-align: center;
+                border-radius: 4px;
+                font-size: 1rem;
+                text-transform: uppercase;
+                height: 30px;
+                line-height: 30px;
+                margin-bottom: .75rem;
+                font-weight: 600;
+                letter-spacing: .1rem;
+            }
+
+            @media (min-width: 550px) {
+                #grid .column,
+                #grid .columns {
+                    margin-bottom: 1.5rem;
+                }
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <header>
+            <nav>
+            </nav>
+        </header>
+        <main>
+            <section id="logo">
+                <!-- Github link in upper-right corner -->
+                <a href="https://github.com/robsheldon/sscaffold-css/" class="github-corner" aria-label="View source on GitHub" style="position: absolute; top: 0; border: 0; right: 0; height: 80px; width: 80px;">
+                    <svg width="80" height="80" viewBox="0 0 250 250" style="fill:#151513; color:#fff;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg>
+                </a>
+                <style>
+                    .github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}
+                </style>
+
+                <img src="/sscaffold_logo.png" style="width: 90%; max-width: 80rem;">
+            </section>
+            <section id="introduction">
+                <h1>Introduction</h1>
+                <p>sscaffold is another modern, lightweight css library that builds on the efforts of previous libraries like <a href="https://milligram.io/">milligram</a>, <a href="http://getskeleton.com/">skeleton</a>, and <a href="https://necolas.github.io/normalize.css/">normalize</a>.</p>
+                <p>sscaffold packs into a single file:
+                    <ul>
+                        <li>milligram's flexbox-based columns</li>
+                        <li>skeleton's 12-column layout</li>
+                        <li>most of normalize's resets</li>
+                    </ul>
+                </p>
+                <p>...and adds in a handful of updates and other bits and pieces from around the web. The single file is <strong>human-readable</strong>, <strong>commented</strong>, includes <strong>credits to original authors</strong>, and is designed to be <strong>easily customized</strong>.</p>
+                <h3><i>Library</i>, not a framework</h3>
+                <p>Frameworks typically require building designs that conform to the framework. They are hugely beneficial to anyone that invests the time in reading documentation and becoming familiar with the framework&rsquo;s intended way of doing things.</p>
+                <p>This is more of a <i>library</i>: it provides a few different options for handling layout in your design and takes care of some common browser quirks. Otherwise it stays out of your way, letting you quickly prototype any design you can imagine.</p>
+                <h3>Encourage structured html</h3>
+                <p>sscaffold tries to avoid requiring markup like <code>&lt;div class="container"&gt;&hellip;&lt;/div&gt;</code> and instead encourages the use of bare html5 elements like <code>main</code>, <code>section</code>, and <code>article</code>.</p>
+                <p>This is meant to be a good starting point for more complex layouts, but well-structured html should look pretty good by default.</p>
+            </section>
+            <section id="testing">
+                <h1>Testing</h1>
+                <p>Releases are visually tested with <a href="https://crossbrowsertesting.com/">Cross Browser Testing</a>, using screenshots from multiple browsers and mobile devices along with their regression testing features.</p>
+            </section>
+            <section id="typography">
+                <h1>Typography</h1>
+                <p>sscaffold uses Open Sans for body text and Montserrat for headings by default, but typography gets its own section in sscaffold's file, so it&rsquo;s easy to change the typefaces to your liking or build a complete custom theme (coming soon!).</p>
+                <p>Each <code>font-family</code> rule in the default theme uses a font stack with native fallbacks for most operating systems, so if you don't want to use Google&rsquo;s web fonts, simply don't link them in your html.</p>
+                <p>There is still the usual support for <sup>super-script,</sup> <b>bold,</b> <sub>and sub-script</sub>. The default heading elements look like this:</p>
+                <h1>Heading 1</h1>
+                <h2>Heading 2</h2>
+                <h3>Heading 3</h3>
+                <h4>Heading 4</h4>
+                <h5>Heading 5</h5>
+                <h6>Heading 6</h6>
+            </section>
+            <section id="lists">
+                <h1>Lists</h1>
+                <p>sscaffold includes sensible defaults for the standard list types:</p>
+                <ol>
+                    <li>First ordered list item
+                        <ul>
+                            <li>Unordered sub-item a</li>
+                            <li>Unordered sub-item b
+                                <dl>
+                                    <dt>Description list item I</dt>
+                                    <dd>Description item item II</dd>
+                                </dl>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>Second ordered list item</li>
+                </ol>
+            </section>
+            <section id="tables">
+                <h1>Tables</h1>
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Century</th>
+                                <th>Field</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Elizabeth Garrett Anderson</td>
+                                <td>19<sup>th</sup></td>
+                                <td>Medicine</td>
+                            </tr>
+                            <tr>
+                                <td>Mary Anning</td>
+                                <td>19<sup>th</sup></td>
+                                <td>Paleontology</td>
+                            </tr>
+                            <tr>
+                                <td>Barbara McClintock</td>
+                                <td>20<sup>th</sup></td>
+                                <td>Genetics</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+            <section id="blockquotes">
+                <h1>Blockquotes</h1>
+                <p>Blockquotes are unchanged from milligram:</p>
+                <blockquote>
+                    &ldquo;Lorem ipsum dolor sit amet, consectetur adipiscing elit&rdquo;, she said.
+                </blockquote>
+            </section>
+            <section id="code">
+                <h1>Code</h1>
+                <p>Code blocks wrapped in <code>&lt;pre&gt;&lt;code&gt;&hellip;&lt;/code&gt;&lt;/pre&gt;</code> look just like they do in milligram:</p>
+                <pre><code>
+10 PRINT HELLO WORLD
+20 GOTO 10
+                </code></pre>
+                <p>...but you can also include any <code>inline code</code> just by adding <code>&lt;code&gt;&hellip;&lt;/code&gt;</code> inside any <code>&lt;p&gt;</code> tag.</p>
+            </section>
+            <section id="forms">
+                <h1>Forms and <a href="javascript:" class="button">buttons</a></h1>
+                <p>Forms are identical to milligram's, but the dropdown arrow has been fixed for <code>&lt;select&gt;</code> fields and the rules for buttons have been adjusted to better support them inside other elements.</p>
+                <form>
+                    <fieldset>
+                        <label for="nameField">Name</label>
+                        <input type="text" placeholder="CJ Patoilo" id="nameField">
+                        <label for="ageRangeField">Age Range</label>
+                        <select id="ageRangeField">
+                            <option value="0-13">0-13</option>
+                            <option value="14-17">14-17</option>
+                            <option value="18-23">18-23</option>
+                            <option value="24+">24+</option>
+                        </select>
+                        <label for="commentField">Comment</label>
+                        <textarea placeholder="Hi CJ …" id="commentField"></textarea>
+                        <div class="float-right">
+                            <input type="checkbox" id="confirmField">
+                            <label class="inline" for="confirmField">Send a copy to yourself</label>
+                        </div>
+                        <input type="submit" value="Send" onclick="javascript:return false;">
+                    </fieldset>
+                </form>
+            </section>
+            <section id="columns">
+                <h1>Flexbox columns</h1>
+                <p>sscaffold includes milligram's flexbox-based columns so you can update milligram-based projects:</p>
+                <div>
+                    <div class="row">
+                        <div class="column">.column</div>
+                        <div class="column">.column</div>
+                        <div class="column">.column</div>
+                        <div class="column">.column</div>
+                    </div>
+                    <div class="row">
+                        <div class="column">.column</div>
+                        <div class="column column-50 column-offset-25">.column column-50 column-offset-25</div>
+                    </div>
+                </div>
+                <h4>Column widths</h4>
+                    <div>
+                        <div class="row">
+                            <div class="column column-10">10%</div>
+                        </div>
+                        <div class="row">
+                            <div class="column column-20">20%</div>
+                        </div>
+                        <div class="row">
+                            <div class="column column-25">25%</div>
+                        </div>
+                        <div class="row">
+                            <div class="column column-33">33%</div>
+                        </div>
+                        <div class="row">
+                            <div class="column column-40">40%</div>
+                        </div>
+                        <div class="row">
+                            <div class="column column-50">50%</div>
+                        </div>
+                        <div class="row">
+                            <div class="column column-60">60%</div>
+                        </div>
+                        <div class="row">
+                            <div class="column column-67">67%</div>
+                        </div>
+                        <div class="row">
+                            <div class="column column-70">70%</div>
+                        </div>
+                        <div class="row">
+                            <div class="column column-75">75%</div>
+                        </div>
+                        <div class="row">
+                            <div class="column column-80">80%</div>
+                        </div>
+                        <div class="row">
+                            <div class="column column-90">90%</div>
+                        </div>
+                        <div class="row">
+                            <div class="column">100%</div>
+                        </div>
+                    </div>
+            </section>
+            <section id="grid">
+                <h1>The 12-column grid</h1>
+                <p>sscaffold includes skeleton.css's 12-column grid so you can easily update any skeleton-based project:</p>
+                <div>
+                    <div class="row">
+                        <div class="one column">One</div>
+                        <div class="eleven columns">Eleven</div>
+                    </div>
+                    <div class="row">
+                        <div class="two columns">Two</div>
+                        <div class="ten columns">Ten</div>
+                    </div>
+                    <div class="row">
+                        <div class="three columns">Three</div>
+                        <div class="nine columns">Nine</div>
+                    </div>
+                    <div class="row">
+                        <div class="four columns">Four</div>
+                        <div class="eight columns">Eight</div>
+                    </div>
+                    <div class="row">
+                        <div class="five columns">Five</div>
+                        <div class="seven columns">Seven</div>
+                    </div>
+                    <div class="row">
+                        <div class="six columns">Six</div>
+                        <div class="six columns">Six</div>
+                    </div>
+                    <div class="row">
+                        <div class="seven columns">Seven</div>
+                        <div class="five columns">Five</div>
+                    </div>
+                    <div class="row">
+                        <div class="eight columns">Eight</div>
+                        <div class="four  columns">Four</div>
+                    </div>
+                    <div class="row">
+                        <div class="nine columns">Nine</div>
+                        <div class="three columns">Three</div>
+                    </div>
+                    <div class="row">
+                        <div class="ten columns">Ten</div>
+                        <div class="two columns">Two</div>
+                    </div>
+                    <div class="row">
+                        <div class="eleven columns">Eleven</div>
+                        <div class="one column">One</div>
+                    </div>
+                </div>
+            </section>
+            <section id="footer">
+                <h1>Sticky Footer</h1>
+                <p>If your html looks like:</p>
+                <pre><code>&lt;body&gt;
+    &lt;header&gt;&hellip;&lt;/header&gt;
+    &lt;main&gt;&hellip;&lt;/main&gt;
+    &lt;footer&gt;&hellip;&lt;/footer&gt;
+&lt;/body&gt;</code></pre>
+                <p>...then you get full-height content and sticky footers for free.</p>
+            </section>
+        </main>
+        <footer>Floating sticky FOOTER!!
+        </footer>
+    </body>
+</html>
